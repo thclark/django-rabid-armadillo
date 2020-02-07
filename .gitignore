@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Jetbrains stuff. Supposedly you can commit some settings but they inevitably make a hash of it
+.idea/
