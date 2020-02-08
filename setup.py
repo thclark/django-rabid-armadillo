@@ -24,7 +24,7 @@ setup(
     long_description_content_type="text/markdown",
     author='<your_github_handle>',
     author_email='withheld.find@me.at.github.com',
-    url='https://github.com/<your_github_handle/django-rabid-armadillo',
+    url='https://github.com/<your_github_handle>/django-rabid-armadillo',
     packages=find_packages(exclude=('tests', 'docs')),
     license='MIT',
     classifiers=[
@@ -38,7 +38,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'django>=2.1',
+        'django>=2.2',
     ],
     keywords=['django', 'armadillos']
 )

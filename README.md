@@ -49,7 +49,31 @@ License is currently MIT. Do what you like, I guess, but I humbly beg you to kee
 frustrating than finding a library that does what you need, and that you could contribute to, then not being able to
 use it because it's GPL'd.
 
+## Begin development
 
+Create and activate a virtual environment, using a supported python version, eg:
+```
+pyenv virtualenv 3.6.9 django-rabid-armadillo
+pyenv activate django-rabid-armadillo
+```
+and open the project in your favourite IDE or editor.
+
+Install the development requirements:
+```
+pip install requirements.txt
+```
+
+Run the tests (nb the postgres ones might not work unless you have postgres set up locally, but sqlite should work)
+```
+tox
+```
+
+
+
+
+
+## Publish your app
+ 
 ### Deploy to pypi, travis and RTD
 
 Instructions forthcoming. Google it. In the meantime...
