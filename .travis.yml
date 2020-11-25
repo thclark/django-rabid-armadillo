@@ -10,18 +10,18 @@ addons:
 
 matrix:
   include:
-    - python: 3.5
-      env: TOXENV=py35-dj22-sqlite
-    - python: 3.6
-      env: TOXENV=py36-dj22-sqlite
     - python: 3.7
-      env: TOXENV=py37-dj22-sqlite
-    - python: 3.5
-      env: TOXENV=py35-dj22-postgres
-    - python: 3.6
-      env: TOXENV=py36-dj22-postgres
+      env: TOXENV=py37-dj31-channels30-sqlite
+    - python: 3.8
+      env: TOXENV=py38-dj31-channels30-sqlite
+    - python: 3.9
+      env: TOXENV=py39-dj31-channels30-sqlite
     - python: 3.7
-      env: TOXENV=py37-dj22-postgres
+      env: TOXENV=py37-dj31-channels30-postgres
+    - python: 3.8
+      env: TOXENV=py38-dj31-channels30-postgres
+    - python: 3.9
+      env: TOXENV=py39-dj31-channels30-postgres
 
 before_install:
   - sudo apt-get update
