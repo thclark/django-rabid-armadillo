@@ -50,13 +50,13 @@ repos:
           - '^review/([a-z][a-z0-9]*)(-[a-z0-9]+)*$'
           - '^release/(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)(?:-(?P<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
 
-#  - repo: https://github.com/thclark/pre-commit-sphinx
-#    rev: 0.0.1
-#    hooks:
-#      - id: build-docs
-#        language_version: python3
-#        additional_dependencies:
-#          - 'Sphinx>=2,<3'
-#          - 'sphinx-rtd-theme==0.5.0'
-#          - 'sphinx-tabs==1.2.1'
-#          - 'sphinx-charts==0.0.4'
+  - repo: https://github.com/thclark/pre-commit-sphinx
+    rev: 0.0.1
+    hooks:
+      - id: build-docs
+        language_version: python3
+        additional_dependencies:
+          - 'Sphinx>=2,<3'
+          - 'sphinx-rtd-theme==0.5.0'
+          - 'sphinx-tabs==1.2.1'
+          - 'sphinx-charts==0.0.4'
