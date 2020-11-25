@@ -11,34 +11,34 @@
 #   To deploy on PYPI follow the instructions at the bottom of:
 #       https://packaging.python.org/tutorials/distributing-packages/#uploading-your-project-to-pypi
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
-with open('README.md') as f:
+
+with open("README.md") as f:
     readme_text = f.read()
 
 setup(
-    name='rabid_armadillo',
-    version='0.0.1',
-    description='An app to save the aprmadillos',
+    name="rabid_armadillo",
+    version="0.0.1",
+    description="An app to save the armadillos",
     long_description=readme_text,
     long_description_content_type="text/markdown",
-    author='<your_github_handle>',
-    author_email='withheld.find@me.at.github.com',
-    url='https://github.com/<your_github_handle>/django-rabid-armadillo',
-    packages=find_packages(exclude=('tests', 'docs')),
-    license='MIT',
+    author="<your_github_handle>",
+    author_email="withheld.find@me.at.github.com",
+    url="https://github.com/<your_github_handle>/django-rabid-armadillo",
+    packages=find_packages(exclude=("tests", "docs")),
+    license="MIT",
     classifiers=[
-        'Development Status :: 4 - Beta',
-        'Intended Audience :: Developers',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Operating System :: OS Independent'
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Operating System :: OS Independent",
     ],
     include_package_data=True,
-    install_requires=[
-        'django>=2.2',
-    ],
-    keywords=['django', 'armadillos']
+    install_requires=["django>=3.0,<4.0", "channels>=3.0,<4.0"],
+    keywords=["django", "armadillos"],
 )

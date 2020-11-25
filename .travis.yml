@@ -10,24 +10,24 @@ addons:
 
 matrix:
   include:
-    - python: 3.5
-      env: TOXENV=py35-dj22-sqlite
-    - python: 3.6
-      env: TOXENV=py36-dj22-sqlite
     - python: 3.7
-      env: TOXENV=py37-dj22-sqlite
-    - python: 3.5
-      env: TOXENV=py35-dj22-postgres
-    - python: 3.6
-      env: TOXENV=py36-dj22-postgres
+      env: TOXENV=py37-dj31-channels30-sqlite
+    - python: 3.8
+      env: TOXENV=py38-dj31-channels30-sqlite
+    - python: 3.9
+      env: TOXENV=py39-dj31-channels30-sqlite
     - python: 3.7
-      env: TOXENV=py37-dj22-postgres
+      env: TOXENV=py37-dj31-channels30-postgres
+    - python: 3.8
+      env: TOXENV=py38-dj31-channels30-postgres
+    - python: 3.9
+      env: TOXENV=py39-dj31-channels30-postgres
 
 before_install:
   - sudo apt-get update
   - sudo apt-get --yes remove postgresql\*
   - sudo apt-get install -y postgresql-11 postgresql-client-11
-  - sudo cp /etc/postgresql/{9.6,11}/main/pg_hba.conf
+  - sudo cp /etc/postgresql/11/main/pg_hba.conf
   - sudo service postgresql restart 11
 
 install:

@@ -1,3 +1,0 @@
-# These are requirements for running the test app locally as a server, not for the actual library
-django==2.1.4
-tox==3.7.0
