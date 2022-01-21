@@ -51,6 +51,7 @@
   "extensions": [
     "esbenp.prettier-vscode",
     "irongeek.vscode-env",
+    "me-dutour-mathieu.vscode-github-actions",
     "mikestead.dotenv",
     "ms-python.python",
     "ms-python.vscode-pylance",
@@ -59,7 +60,9 @@
     "ms-toolsai.jupyter-keymap",
     "ms-vsliveshare.vsliveshare",
     "p403n1x87.austin-vscode",
-    "ritwickdey.liveserver"
+    "ritwickdey.liveserver",
+    "shamanu4.django-intellisense",
+    "thebarkman.vscode-djaneiro"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
