@@ -17,7 +17,7 @@
 Django Rabid Armadillo
 ======================
 
-**django-rabid-armadillo** is a library to help armadillos in deperate need...
+**django-rabid-armadillo** is a library to help armadillos in desperate need...
 
 .. epigraph::
    *"rabid armadillo" [rab-id ar-mah-dil-oh] ~ not a happy armadillo*

@@ -9,11 +9,11 @@ simple:
 
 .. code-block:: py
 
-    pip install django-rabid-armadillo
+    poetry add django-rabid-armadillo
 
-Don't have a virtual environment with pip? You probably should! ``pyenv`` is your friend. Google it.
+Not using poetry? It's highly opinionated, but it's your friend. Google it.
 
-You'll need to install it as an app in your django settings:
+Next, you'll need to install this as an app in your django settings:
 
 .. code-block:: py
 

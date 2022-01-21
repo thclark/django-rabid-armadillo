@@ -1,5 +1,0 @@
-include LICENSE
-include README.md
-recursive-include rabid_armadillo/static *
-recursive-include rabid_armadillo/templates *
-recursive-include docs *

@@ -134,3 +134,7 @@ dmypy.json
 # Sphinx docs built locally
 docs/html
 docs/doctrees
+
+
+# Pytest cache
+.pytest_cache
