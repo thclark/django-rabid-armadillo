@@ -27,29 +27,28 @@ This is a template repository for when you want to create a new django app. It g
 
 - Complete `.devcontainer` setup for use in VSCode complete with a postgres database service
 
-## Template Repository
+## How To Use This Template Repository
 
 This is a template repository on GitHub. You can use it as a template when creating a new django app.
 
-## How to use
-
 ### Start a repo
 
-Create your own repository on github, using this repo as a template. Call it what you like.
+Click the 'Use this Template' button (top right) on GitHub to create your own repository using this repo as a template.
+Call it what you like, but we suggest the convention `django-your-library`.
 In this example, let's say your github username is `armadillo-queen` and your new repository is called `django-rabid-armadillo`.
 
 ### Replace template items
 
 Do find and replace throughout, working your way through this list of replacements
 
-| Search               | Replace (Example)        | Description                                                                                                                                                                                   |
-| -------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| <your_repo_name>     | `django-rabid-armadillo` | The github repository name. Convention for django apps seems to be hyphenating rather than using snake case, but do what you want. I assume the package name is the same as the gh repo name. |
-| <your_github_handle> | `armadillo-queen`        | Your github handle                                                                                                                                                                            |     |
-| <copyright_owner>    | Tom Clark                | The copyright owner's name. Probably you, or your company                                                                                                                                     |
-| `rabid_armadillo`    | `rabid_armadillo`        | The module name of your app, which is importable in python (ie hyphens don't work. Stick to snake case!). Search and replace the whole of everything!                                         |
-| `RabidArmadillo`     |                          | Replace with the capitalised camel case version of your app name                                                                                                                              |
-| `Rabid Armadillo`    | Rabid Armadillo          | Human-readable, capitalised, app name                                                                                                                                                         |
+| Search               | Replace (Example)        | Description                                                                                                                                                                                                        |
+| -------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <your_repo_name>     | `django-rabid-armadillo` | The github repository name. Convention for django apps seems to be hyphenating rather than using snake case, but do what you want. Easiest thing is to make the package name on PyPi the same as the gh repo name. |
+| <your_github_handle> | `armadillo-queen`        | Your github handle                                                                                                                                                                                                 |
+| <copyright_owner>    | Tom Clark                | The copyright owner's name. Probably you, or your company                                                                                                                                                          |
+| `rabid_armadillo`    | `rabid_armadillo`        | The module name of your app, which is importable in python (ie hyphens don't work. Stick to snake case!). Search and replace the whole of everything!                                                              |
+| `RabidArmadillo`     |                          | Replace with the capitalised camel case version of your app name                                                                                                                                                   |
+| `Rabid Armadillo`    | Rabid Armadillo          | Human-readable, capitalised, app name                                                                                                                                                                              |
 
 ### Update pyproject.toml
 
