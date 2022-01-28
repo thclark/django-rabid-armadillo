@@ -3,6 +3,7 @@
 [![codecov](https://codecov.io/gh/{{codecov_username}}/{{library_name}}/branch/master/graph/badge.svg)](https://codecov.io/gh/{{codecov_username}}/{{library_name}})
 [![Documentation Status](https://readthedocs.org/projects/{{library_name}}/badge/?version=latest)](https://{{library_name}}.readthedocs.io/en/latest/?badge=latest)
 --->
+
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
@@ -42,17 +43,17 @@ In this example, let's say your github username is `armadillo-queen` and your ne
 Do find and replace throughout, working your way through this list of replacements
 
 | Search               | Replace (Example)        | Description                                                                                                                                                                                   |
-| -------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | <your_repo_name>     | `django-rabid-armadillo` | The github repository name. Convention for django apps seems to be hyphenating rather than using snake case, but do what you want. I assume the package name is the same as the gh repo name. |
-| <your_github_handle> | `armadillo-queen`        | Your github handle                                                                                                                                                                            |                                                                                                                     |
+| <your_github_handle> | `armadillo-queen`        | Your github handle                                                                                                                                                                            |     |
 | <copyright_owner>    | Tom Clark                | The copyright owner's name. Probably you, or your company                                                                                                                                     |
 | `rabid_armadillo`    | `rabid_armadillo`        | The module name of your app, which is importable in python (ie hyphens don't work. Stick to snake case!). Search and replace the whole of everything!                                         |
 | `RabidArmadillo`     |                          | Replace with the capitalised camel case version of your app name                                                                                                                              |
 | `Rabid Armadillo`    | Rabid Armadillo          | Human-readable, capitalised, app name                                                                                                                                                         |
 
-### Update setup.py
+### Update pyproject.toml
 
-Add the library requirements under install_requires
+Add library requirements using poetry. If you don't know how to use it, yes it's a bit more painful than pip at first, but it's short term pain, medium term massive gains.
 
 ### Update `LICENSE` file and `docs/source/license.rst`
 
@@ -78,15 +79,6 @@ tox
 
 ## Publish your app
 
-### Deploy to pypi, travis and RTD
+We assume that you'll use github actions so see the `.github/workflows` folder for the process.
 
-Instructions forthcoming. Google it. In the meantime...
-
-This medium article descripbes the travis / releases integration steps:
-https://medium.com/@mikkokotila/deploying-python-packages-to-pypi-with-travis-works-9a6597781556
-
-The Hitchiker's guide to python provides an excellent, standard, method for creating python packages:
-http://docs.python-guide.org/en/latest/writing/structure/
-
-To deploy on PYPI follow the instructions at the bottom of:
-https://packaging.python.org/tutorials/distributing-packages/#uploading-your-project-to-pypi
+As background information, the Hitchiker's guide to python provides [an excellent, standard, method for creating python packages](http://docs.python-guide.org/en/latest/writing/structure/) and there's a good [set of instructions on PYPI](https://packaging.python.org/tutorials/distributing-packages/#uploading-your-project-to-pypi). You'll see in the workflows that we circumvent those processes and use poetry to do it for us.
