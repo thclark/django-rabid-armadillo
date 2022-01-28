@@ -10,8 +10,8 @@ ARG NODE_VERSION="lts/*"
 RUN if [ "${INSTALL_NODE}" = "true" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
 # Install Oh-My-Zsh shell for development
-#    - af-magic theme
-#    - git, ssh and command history searching enabled
+#    - af-magic theme (because it looks closest to the github theme I use in VSCode, change to your preference)
+#    - git, ssh and command history searching enabled (add more plugins as you wish)
 #    - command history file mapped into the .devcontainer folder to enable reuse between container builds
 ENV HISTFILE="/workspaces/wake-service/.devcontainer/.zsh_history"
 RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.1.1/zsh-in-docker.sh)" -- \
@@ -61,12 +61,10 @@ ENV HISTFILE="/workspace/.devcontainer/.zsh_history"
 #    Poetry usage in docker: https://stackoverflow.com/a/54763270/3556110
 #    Caching package downloads with buildkit: https://pythonspeed.com/articles/docker-cache-pip-downloads/
 #    Using pipx for python development utilities: https://github.com/microsoft/vscode-dev-containers/blob/main/containers/python-3/README.md#installing-or-updating-python-utilities
-#
-#    Why don't we do this for you in the gdal-python image???
-#     - we may need to move the poetry version quicker than the base image
-#     - because we can't conditionally mount a cache (for dev/slim images)
-#     - poetry and dependencies can be agony, so we want per-project control at least for now
-#     - if a repo is not using poetry, it doesn't make sense for us to force the presence of the tool
+#    Notes:
+#     - pipx just doesn't get it right. The dependencies end up not being found by the linter, so we fall back to the recommended way of installing poetry
+#     - Poetry and dependencies can be agony, particularly surrounding the permissions of the vscode user, so we don't get hyper opinionated here
+#     - I just can't get dependency caches working correctly with the vscode user across all platforms (permissions stuff)
 #
 USER vscode
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
