@@ -7,6 +7,8 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
+> **NOTE: The checks/actions on this template repository WILL NEVER PASS. That's because they're templated ready for your variables, so they don't make sense to GitHub!**
+
 # Rabid Armadillo (aka Django App Template)
 
 This is a template repository for when you want to create a new django app. It gives you, out of the box:
